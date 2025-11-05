@@ -43,9 +43,10 @@ export const serviceAnimation = () => {
 
 export const serviceAnimationTwo = () => {
   const section = document.querySelector(".service-area-4");
-  if (!section) return;
+  if (!section) return null;
     
     const mm = gsap.matchMedia();
+    let timeline: gsap.core.Timeline | null = null;
 
     mm.add("(min-width: 1024px)", () => {
       const container = document.querySelector(".service-area-4") as HTMLElement | null;
@@ -77,15 +78,9 @@ export const serviceAnimationTwo = () => {
       tl.to(track, {
         x: () => getScrollAmount(),
         ease: "power1.inOut",
-      }).to(
-        ".service-thumb-line-wrapper span",
-        {
-          scaleX: 0,
-          stagger: 0.04,
-          ease: "power1.out",
-        },
-        "<"
-      );
+      });
+
+      timeline = tl;
 
       // Cleanup when media query is reverted
       return () => {
@@ -93,4 +88,6 @@ export const serviceAnimationTwo = () => {
         tl.kill();
       };
     });
+    
+    return timeline;
 };

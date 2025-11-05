@@ -73,24 +73,6 @@ export default function HomePage() {
               <ServiceAreaTwo />
               {/* service area end */}
 
-              {/* testimonial area start */}
-              <TestimonialArea />
-              {/* testimonial area end */}
-
-              {/* client area start */}
-              <ClientSliderTwo />
-              {/* client area end */}
-
-              {/* circular shape area start */}
-              <div className="mb--1">
-                <div className="circular-shape-wrapper">
-                  <div className="shape-thumb">
-                    <Image src={shape_2} alt="image" />
-                  </div>
-                </div>
-              </div>
-              {/* circular shape area end */}
-
               {/* Award area start */}
               <AwardArea />
               {/* Award area end */}

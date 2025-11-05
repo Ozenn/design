@@ -11,7 +11,7 @@ import {
 } from "@/utils/title-anim";
 import { movingTestimonial } from "@/utils/testimonial-anim";
 import { circularAnim } from "@/utils/circular-anim";
-import { serviceAnimation } from "@/utils/service-anim";
+import { serviceAnimation, serviceAnimationTwo } from "@/utils/service-anim";
 import { ctaAnim } from "@/utils/cta-anim";
 import { aboutAnim } from "@/utils/about-anim";
 import { workAnimation } from "@/utils/work-anim";
@@ -27,8 +27,21 @@ export default function CreativeAgencyWrapper({ children }: Props) {
       RRTitleAnimation();
       charAnimation();
       movingTestimonial();
-      circularAnim();
       serviceAnimation();
+      
+      // Start horizontale scroll en koppel circular anim
+      const horizontalTimeline = serviceAnimationTwo();
+      if (horizontalTimeline) {
+        circularAnim({
+          containerAnimation: horizontalTimeline,
+          trigger: ".service-circular",
+          img: ".service-circular .shape-thumb img"
+        });
+      } else {
+        // Fallback naar oude circular anim als horizontale scroll niet werkt
+        circularAnim();
+      }
+      
       ctaAnim();
       aboutAnim();
       workAnimation();

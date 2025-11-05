@@ -1,85 +1,87 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import gallery_1 from '@/assets/imgs/gallery/image-10.webp';
-import gallery_2 from '@/assets/imgs/gallery/image-11.webp';
+import shape_2 from '@/assets/imgs/shape/shape-8.svg';
 
 const services = [
   {
-    number: "001",
-    title: <>Art <br />Direction</>,
-    text: "Our aim is to nurture brands and help them grow. And just like human brands need to grow.",
+    number: "01",
+    title: "Art Direction",
+    features: [
+      "Design Strategy",
+      "Prototyping & Wireframe",
+      "Design system",
+      "Usability testing",
+    ],
   },
   {
-    number: "002",
-    title: <>Interaction <br />Design</>,
-    text: "Whether your inquiries are big or small, we're prepared to engage, focusing on complex problems",
+    number: "02",
+    title: "Interaction Design",
+    features: [
+      "User Research",
+      "Interface Design",
+      "Motion Design",
+      "User Experience",
+    ],
   },
   {
-    number: "003",
-    title: <>Web &amp; Mobile <br />Development</>,
-    text: "Every opportunity comes with unique factors are the main stream we can offer your brand.",
+    number: "03",
+    title: "Web & Mobile Development",
+    features: [
+      "Frontend Development",
+      "Backend Development",
+      "Mobile Apps",
+      "API Integration",
+    ],
   },
   {
-    number: "004",
-    title: <>Digital <br />Marketing</>,
-    text: "We offer digital marketing that connect, engage, and drive results. Let’s turn your vision into reality.",
-  },
-  {
-    number: "005",
-    title: <>Brand <br />Guideline</>,
-    text: "We always eager to collaborate with forward-thinking individuals and the organizations",
+    number: "04",
+    title: "Digital Marketing",
+    features: [
+      "SEO Optimization",
+      "Social Media",
+      "Content Strategy",
+      "Analytics",
+    ],
   },
 ];
 
 export default function ServiceAreaTwo() {
   return (
-    <section className="service-area-2" style={{marginTop: '0', paddingTop: '0'}}>
-      <div className="service-area-2-inner">
-        <div className="services-wrapper-box section-spacing-bottom">
-          <div className="container large">
-            <div className="services-wrapper-2">
-              {services.map((service) => (
-                <Link className="fade-anim" href="/service-details" key={service.number}>
-                  <div className="service-box-wrapper">
-                    <div className="service-box">
-                      <div className="number">{service.number}</div>
-                      <h3 className="title">{service.title}</h3>
-                      <p className="text">{service.text}</p>
-                    </div>
+    <section className="service-area-4" style={{
+      marginTop: '-650px', 
+      paddingTop: '200px',
+      backgroundColor: '#111111',
+      color: '#ffffff'
+    }}>
+      <div className="container large">
+        <div className="service-area-4-inner">
+          <div className="services-wrapper-box">
+            <div className="services-wrapper-4">
+              {services.map((service, index) => (
+                <div className="service-box fade-anim" key={index} style={{
+                  color: '#ffffff',
+                  borderColor: 'rgba(255, 255, 255, 0.1)'
+                }}>
+                  <span className="number" style={{color: '#ffffff'}}>{service.number}</span>
+                  <h2 className="title" style={{color: '#ffffff'}}>
+                    <Link href="/service-details" style={{color: '#ffffff'}}>{service.title}</Link>
+                  </h2>
+                  <div className="feature-list">
+                    <ul>
+                      {service.features.map((feature, i) => (
+                        <li key={i} style={{color: 'rgba(255, 255, 255, 0.7)'}}>{feature}</li>
+                      ))}
+                    </ul>
                   </div>
-                </Link>
+                </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="service-content-wrapper section-spacing-top">
-        <div className="container large">
-          <div className="service-content">
-            <div className="section-info-wrapper fade-anim" data-direction="left">
-              <div className="thumb parallax-view">
-                <Image src={gallery_1} alt="image" data-speed="0.7" style={{height:"auto"}} />
-              </div>
-              <div className="text-wrapper">
-                <p className="text text-invert">
-                  A practical guide explaining how and why Redox should be part of every project to ensure its high quality and seamless user experience.
-                </p>
-                <p className="text text-invert">
-                  If you already understand ask to continue scrolling; otherwise, click the link below to explore more.
-                </p>
-              </div>
-              <div className="btn-wrapper">
-                <Link href="/portfolio" className="rr-btn btn-border-white">
-                  <span className="btn-wrap">
-                    <span className="text-one">View All Work</span>
-                    <span className="text-two">View All Work</span>
-                  </span>
-                </Link>
-              </div>
-            </div>
-            <div className="section-thumb-wrapper fade-anim" data-delay="0.45" data-direction="right">
-              <div className="thumb parallax-view">
-                <Image src={gallery_2} alt="image" data-speed="0.6" style={{height:"auto"}} />
+              
+              {/* Circular shape als laatste slide */}
+              <div className="service-circular" style={{backgroundColor: '#111111'}}>
+                <div className="shape-thumb">
+                  <Image src={shape_2} alt="circular shape" priority />
+                </div>
               </div>
             </div>
           </div>

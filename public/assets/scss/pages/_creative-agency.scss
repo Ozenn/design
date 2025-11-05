@@ -37,6 +37,19 @@
         img {
             width: 100%;
         }
+        
+        // Horizontale lijnen overlay
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 100% 100px;
+            pointer-events: none;
+        }
     }
 
     .container {
