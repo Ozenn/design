@@ -9,6 +9,13 @@
   flex-shrink: 0;
 }
 
+/* Verberg circular shape op mobiel */
+@media (max-width: 1023px) {
+  .service-circular {
+    display: none;
+  }
+}
+
 .service-circular .shape-thumb {
   width: 30vmin;
   height: 30vmin;
