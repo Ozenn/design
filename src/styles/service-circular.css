@@ -13,6 +13,19 @@
     flex-direction: column;
     width: 100% !important;
   }
+  
+  /* Circular shape op mobiel - normale weergave */
+  .service-circular {
+    min-width: 100% !important;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .service-circular .shape-thumb {
+    width: 50vmin;
+    height: 50vmin;
+  }
 }
 
 /* Circular shape in horizontal scroll */
@@ -24,13 +37,6 @@
   place-items: center;
   background: #111111;
   flex-shrink: 0;
-}
-
-/* Verberg circular shape op mobiel */
-@media (max-width: 1023px) {
-  .service-circular {
-    display: none;
-  }
 }
 
 .service-circular .shape-thumb {

@@ -1,0 +1,39 @@
+/* Mobile hero fixes */
+@media (max-width: 1199px) {
+  /* Verberg award badge op mobiel */
+  .award-wrapper {
+    display: none !important;
+  }
+  
+  /* Zorg dat hero Redox zichtbaar en gecentreerd is */
+  .big-text-wrapper {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .big-text-wrapper .big-text {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 50vw !important;
+    line-height: 1 !important;
+    text-align: center;
+    width: 100%;
+    transform-origin: center center !important;
+  }
+  
+  /* Verberg de about Redox titel op mobiel - we gebruiken de hero versie */
+  .about-area .section-title-wrapper .section-title {
+    display: none;
+  }
+  
+  /* Hero area overflow fix */
+  .hero-area {
+    overflow: visible;
+  }
+}

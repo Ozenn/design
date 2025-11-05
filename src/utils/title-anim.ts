@@ -5,6 +5,7 @@ import { SplitText } from "gsap/SplitText";
 export const titleAnimation = () => {
   const mm = gsap.matchMedia();
 
+  // Desktop versie
   mm.add("(min-width: 1200px)", () => {
     if (document.querySelectorAll(".hero-area").length > 0) {
       // Detect dark mode via body class
@@ -43,6 +44,40 @@ export const titleAnimation = () => {
           trigger: ".about-area",
           start: "top center",
           end: "center center",
+          scrub: 1,
+        },
+      });
+    }
+  });
+
+  // Mobiel versie - simpele animatie zoals desktop
+  mm.add("(max-width: 1199px)", () => {
+    if (document.querySelectorAll(".hero-area").length > 0) {
+      const isDarkMode = document.body.classList.contains("dark");
+      const bigtextColor = isDarkMode ? "#FFFFFF" : "#111111";
+      
+      // Redox animatie voor mobiel
+      gsap.to(".big-text-wrapper .big-text", {
+        scale: 0.25,
+        color: bigtextColor,
+        y: "140%",
+        transformOrigin: "center center",
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".hero-area",
+          start: "top top",
+          end: "bottom+=50% top",
+          scrub: 1,
+        },
+      });
+      
+      // Tekst fade in voor mobiel
+      gsap.to([".about-area .text-wrapper", ".about-area .btn-wrapper"], {
+        opacity: 1,
+        scrollTrigger: {
+          trigger: ".about-area",
+          start: "top 80%",
+          end: "top 50%",
           scrub: 1,
         },
       });

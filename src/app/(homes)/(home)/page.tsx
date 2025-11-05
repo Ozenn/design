@@ -70,10 +70,6 @@ export default function HomePage() {
               <ServiceAreaTwo />
               {/* service area end */}
 
-              {/* Award area start */}
-              <AwardArea />
-              {/* Award area end */}
-
               {/* team area start */}
               <TeamArea />
               {/* team area end */}
