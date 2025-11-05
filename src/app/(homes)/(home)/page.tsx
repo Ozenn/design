@@ -39,10 +39,7 @@ export default function HomePage() {
 
             {/* body bg start */}
             <div className="body-bg">
-              <div className="container large">
-                <Image src={shape} alt="image" />
-                <Image src={shape} alt="image" />
-              </div>
+              {/* Images verwijderd - we gebruiken nu CSS grid pattern */}
             </div>
             {/* body bg end */}
 

@@ -35,10 +35,15 @@
         left: 0;
         z-index: -1;
         overflow: hidden;
-
-        img {
-            width: 100%;
-        }
+        // Verticale lijnen (via background gradient pattern)
+        background-image: 
+            repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 99px,
+                rgba(255, 255, 255, 0.05) 99px,
+                rgba(255, 255, 255, 0.05) 100px
+            );
         
         // Horizontale lijnen overlay
         &::after {
