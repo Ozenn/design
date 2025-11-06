@@ -61,9 +61,9 @@
 
     .container {
         &.large {
-            @media (min-width: 1850px) {
-                max-width: 1850px;
-                --container-max-widths: 1820px;
+            @media (min-width: 1750px) {
+                max-width: 1750px;
+                --container-max-widths: 1720px;
             }
         }
     }
