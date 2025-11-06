@@ -15,7 +15,7 @@ export const titleAnimation = () => {
       gsap.to(".big-text-wrapper .big-text", {
         scale: 0.1,
         color: bigtextColor,
-        y: "76%",
+        y: "60%",
         transformOrigin: "bottom center",
         ease: "none",
         scrollTrigger: {

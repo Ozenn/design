@@ -93,6 +93,27 @@
 
 
 
+/* hero area style */
+
+.hero-area {
+    background: radial-gradient(circle at 0% 50%, hsla(190, 84%, 76%, 0.15) 0%, transparent 30%), 
+                radial-gradient(circle at 98% 35%, hsla(198, 100%, 55%, 0.15) 0%, transparent 50%),
+                linear-gradient(to bottom, #ffffff 0%, #ffffff 50%, #FCF7F3 100%);
+    position: relative;
+    overflow: visible;
+
+    .section-title {
+        margin-left: -60px;
+        max-width: 900px;
+        color: #1a1a2e;
+        
+        @media (max-width: 1199px) {
+            margin-left: 0;
+            max-width: 100%;
+        }
+    }
+}
+
 /* hero area 2 style  */
 
 .hero-area-2 {

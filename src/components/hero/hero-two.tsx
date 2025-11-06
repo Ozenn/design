@@ -8,26 +8,8 @@ export default function HeroTwo() {
       <div className="container large">
         <div className="hero-area-inner section-spacing-top">
           <div className="hero-content section-spacing-bottom">
-            <div
-              className="award-wrapper fade-anim"
-              data-delay="0.90"
-              data-direction="left"
-              data-ease="back.out(4)"
-            >
-              <div className="circle-text-wrapper">
-                <div className="circle-text">
-                  <Image
-                    src={shape_3}
-                    alt="image"
-                    className="text"
-                  />
-                  <Image
-                    src={shape_2}
-                    alt="image"
-                    className="icon"
-                  />
-                </div>
-              </div>
+            <div className="award-wrapper">
+              {/* Award badge verwijderd - wrapper behouden voor layout */}
             </div>
             <div className="section-header">
               <div className="section-title-wrapper">
@@ -36,8 +18,7 @@ export default function HeroTwo() {
                     className="section-title font-sequelsans-romanbody char-anim"
                     data-delay="0.45"
                   >
-                    Creating virtual emotion in the universe, for the largest
-                    brands & market since
+                    Transforming Ideas Into Digital Excellence
                   </h2>
                 </div>
               </div>

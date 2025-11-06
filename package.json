@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@paper-design/shaders-react": "^0.0.62",
     "@types/imagesloaded": "^4.1.7",
     "bootstrap": "^5.3.7",
+    "framer-motion": "^12.23.24",
     "gsap": "^3.13.0",
     "imagesloaded": "^5.0.0",
     "jquery": "^3.7.1",
